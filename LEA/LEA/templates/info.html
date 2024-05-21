@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto LEA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eafbff;
+            color: #163639;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            height: 150px;
+        }
+
+        h1 {
+            color: #1e9ca8;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ab619e; /* Adicionando a cor #ab619e aos links */
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #50d1dd;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1e9ca8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'assets/logo-lea.png' %}" alt="Logo LEA">
+        </div>
+        <h1>Projeto LEA</h1>
+        <p><em>Este projeto é um chatbot desenvolvido por alunos da Universidade Federal de Pernambuco para auxiliar profissionais da área da saúde, fornecendo respostas a perguntas relacionadas a três temas principais:</em></p>
+        <ul>
+            <li><strong>Arboviroses</strong></li>
+            <li><strong>Câncer de Mama</strong></li>
+            <li><strong>Estomas</strong></li>
+        </ul>
+        <p style="margin-bottom: 20px;">O objetivo do chatbot é oferecer informações rápidas e precisas para ajudar profissionais da saúde em suas atividades diárias, melhorando a eficiência e a qualidade do atendimento prestado.</p>
+        <p>O desenvolvimento do chatbot é viabilizado pelo projeto de extensão <strong>"ANGATU-UFPE: Inteligência computacional e ciência de dados para o desenvolvimento de soluções em Saúde Digital"</strong> financiado pela FACEPE e coordenado pelo Professor Dr. Wellington Pinheiro dos Santos em colaboração com Clarisse Lins de Lima, Giselle Machado Magalhães Moreno, Juliana Carneiro Gomes e Maíra Araújo de Santana. Os alunos envolvidos no projeto são Hyngrid Souza e Silva, Luana Lopes Santiago, Maria Amanda Pérez de Oliveira, Maria Luísa Mendes de Siqueira, Matheus Kluiwert de Vasconcelos e Thaís Maria da Silva Barbosa.</p>
+        <a href="{% url 'login' %}"><button>Entrar</button></a>
+    </div>
+</body>
+</html>
+

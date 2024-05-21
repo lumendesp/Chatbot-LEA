@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot LEA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Centralizar o formulário */
+        .login {
+            width: 300px; /* Defina a largura do formulário */
+            margin: 0 auto; /* Centralize horizontalmente */
+            text-align: center; /* Centralize o conteúdo dentro do formulário */
+        }
+
+        /* Estilos para os blocos de entrada e botão */
+        .login input,
+        .login button {
+            display: block; /* Exibe os elementos em blocos */
+            width: 100%; /* Preenche a largura do formulário */
+            margin-bottom: 10px; /* Adiciona algum espaço entre os elementos */
+        }
+
+        /* Estilo específico para o botão */
+        .login button {
+            margin-top: 10px; /* Adiciona espaço acima do botão */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-login">
+        <div class="logo-login">
+            <img src="{% static 'assets/logo-lea.png' %}" alt="Logo LEA" style="height: 180px; margin-left: 20px;">
+        </div>
+        <div class="login">
+            <h1 style="color:#ab619e;">Login</h1>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+                <input id="username" name="username" type="text" placeholder="Usuário">
+                <input id="password" name="password" type="password" placeholder="Senha">
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
